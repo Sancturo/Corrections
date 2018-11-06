@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="correction.GUI.MainWindowController">
+   <children>
+      <Button fx:id="butOpenFile" defaultButton="true" layoutX="734.0" layoutY="14.0" mnemonicParsing="false" text="Открыть фалй" />
+      <Button fx:id="butSaveFile" layoutX="729.0" layoutY="49.0" mnemonicParsing="false" text="Сохранить файл" />
+      <Button fx:id="butExit" cancelButton="true" layoutX="761.0" layoutY="85.0" mnemonicParsing="false" text="Выход" />
+      <TableView fx:id="gCodeTable" layoutX="14.0" layoutY="352.0" prefHeight="247.0" prefWidth="712.0">
+        <columns>
+          <TableColumn fx:id="frameNum" prefWidth="75.0" text="№ кадра" />
+          <TableColumn fx:id="gType" text="G type" />
+            <TableColumn prefWidth="75.0" text="Xstart" fx:id="xStart" />
+            <TableColumn fx:id="yStart" prefWidth="75.0" text="Ystart" />
+            <TableColumn prefWidth="75.0" text="Xend" fx:id="xEnd" />
+            <TableColumn fx:id="yEnd" prefWidth="75.0" text="Yend" />
+            <TableColumn fx:id="feed" prefWidth="75.0" text="Feed" />
+            <TableColumn fx:id="rad" prefWidth="75.0" text="Rad." />
+        </columns>
+      </TableView>
+      <Button fx:id="butDraw" layoutX="726.0" layoutY="120.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="142.0" text="Отрисовка траектории" />
+      <Pane fx:id="drawingPane" layoutX="14.0" layoutY="10.0" prefHeight="339.0" prefWidth="704.0" style="-fx-border-color: BLACK;" />
+   </children>
+</AnchorPane>
